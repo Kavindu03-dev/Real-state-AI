@@ -1,0 +1,59 @@
+{
+  "analysis_id": "analysis_20250831_033344",
+  "timestamp": "2025-08-31T03:33:44.014950",
+  "property_data": {
+    "address": "123 Main St, Austin, TX",
+    "square_feet": 2500,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "year_built": 2015,
+    "property_type": "Single Family",
+    "data_quality_score": 0.95,
+    "collected_at": "2025-08-31T03:33:44.014113"
+  },
+  "price_estimate": {
+    "agent": "Price Estimator",
+    "estimated_price": 535000,
+    "confidence_score": 0.87,
+    "explanation": "Price estimate based on 2500 sq ft, 4 bedrooms, 3 bathrooms, built in 2015. Market analysis shows similar properties in this area.",
+    "market_comparison": {
+      "similar_properties": 12,
+      "avg_price_per_sqft": 150,
+      "market_trend": "increasing"
+    }
+  },
+  "location_analysis": {
+    "agent": "Location Analyzer",
+    "safety_score": 0.85,
+    "school_rating": 0.78,
+    "transport_access": 0.92,
+    "summary": "Located in a Austin neighborhood. The area shows good safety ratings with excellent school districts nearby. Public transportation is readily available with multiple bus routes and a metro station within walking distance. The neighborhood features parks, shopping centers, and restaurants.",
+    "nearby_amenities": [
+      "Public Park (0.3 miles)",
+      "Shopping Center (0.5 miles)",
+      "Metro Station (0.2 miles)",
+      "Hospital (1.2 miles)",
+      "Schools (0.4 miles)"
+    ]
+  },
+  "deal_evaluation": {
+    "agent": "Deal Evaluator",
+    "deal_score": "Hold",
+    "reasoning": "Moderate investment opportunity. Property is fairly priced but consider market timing and personal circumstances.",
+    "risk_score": 0.35,
+    "investment_potential": 0.034,
+    "price_analysis": {
+      "estimated_value": 475000,
+      "current_price": 450000,
+      "price_ratio": 0.947
+    }
+  },
+  "summary": {
+    "recommendation": "Hold",
+    "key_insights": [
+      "Estimated value: $535,000.00",
+      "Location safety: 85.0%",
+      "Investment potential: 3.4%"
+    ]
+  }
+}
