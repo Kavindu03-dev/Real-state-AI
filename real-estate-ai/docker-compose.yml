@@ -1,0 +1,42 @@
+version: "3.9"
+
+services:
+  mongodb:
+    image: mongo:6
+    container_name: rea-mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017" # optional: expose for local debugging
+    volumes:
+      - mongo-data:/data/db
+
+  backend:
+    build:
+      context: ./backend
+    container_name: rea-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      # Ensure backend talks to the Mongo container by default
+      - mongodb_url=mongodb://mongodb:27017
+      # In production, set allow_origins to your domain (comma-separated for multiple)
+      - allow_origins=http://localhost
+    depends_on:
+      - mongodb
+    ports:
+      - "8000:8000" # optional: direct API access from host
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: rea-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+
+volumes:
+  mongo-data:
+    driver: local
